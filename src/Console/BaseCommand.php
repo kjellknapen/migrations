@@ -48,7 +48,7 @@ abstract class BaseCommand extends Command
 
         $input = new ArrayInput($inputArgs);
 
-        if ($this->hasArgument('--no-interaction')) {
+        if ($this->input->hasOption('no-interaction')) {
             $input->setInteractive(false);
         }
 
